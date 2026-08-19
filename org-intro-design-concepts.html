@@ -39,6 +39,15 @@
 
   section{ padding: 44px 0; border-top: 1px solid rgba(30,42,34,0.14); }
   .section-kicker{ font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#5C7A5A; font-weight:700; margin-bottom: 28px; }
+  #courses .section-kicker{ margin-bottom:10px; }
+  .section-lede{ font-size:14px; color:#4A564C; margin-bottom:32px; }
+
+  .audience-group{ margin-bottom: 40px; }
+  .audience-group:last-child{ margin-bottom:0; }
+  .audience-head{ display:flex; align-items:center; gap:10px; }
+  .audience-icon{ flex-shrink:0; }
+  .audience-title{ font-family:'Gowun Batang',serif; font-weight:700; font-size:18px; }
+  .applied-label{ font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#5C7A5A; font-weight:700; margin: 16px 0 4px; }
 
   .course{ display:grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid rgba(30,42,34,0.1); }
   .course:first-of-type{ border-top:none; }
@@ -108,34 +117,107 @@
       2021년 설립 이후, <b>180회</b>의 강의로 <b>65개</b> 기관, <b>3,200명</b>이 넘는 사람들을 만났습니다.
       학교와 지역사회를 직접 마주하며, 그린워싱 없는 진짜 환경 이야기를 전합니다.
     </p>
-    <a class="hero-cta" href="#courses">지금 진행하는 강의 보기 ↓</a>
+    <a class="hero-cta" href="#courses">강의 프로그램 보기 ↓</a>
   </div>
 
   <section id="courses">
-    <div class="section-kicker">지금 진행하는 강의</div>
+    <div class="section-kicker">강의 프로그램</div>
+    <p class="section-lede">대상과 눈높이에 맞춰 설계한 강의를 소개합니다.</p>
 
-    <div class="course">
-      <div class="no">01</div>
-      <div>
-        <h3>패스트패션 산업의 환경 영향과 그린워싱 사례 분석</h3>
-        <div class="meta">성인 · 일반 시민</div>
-        <p>의류 생산·소비 전 과정의 탄소 배출 구조를 살펴보고, 실제 사례를 통해 그린워싱 표시 기준과 판별 방법을 다룹니다.</p>
+    <div class="audience-group">
+      <div class="audience-head">
+        <svg class="audience-icon" viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="#5C7A5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="6" y1="27" x2="26" y2="27"/>
+          <path d="M16 27 V14"/>
+          <path d="M16 18 C10 18 8 12 8 8 C13 8 16 12 16 18 Z"/>
+          <path d="M16 15 C22 15 24 10 24 6 C18 6 16 10 16 15 Z"/>
+        </svg>
+        <h3 class="audience-title">초·중·고 학생</h3>
+      </div>
+      <div class="applied-label">적용 강의</div>
+
+      <div class="course">
+        <div class="no">01</div>
+        <div>
+          <h3>LCA 기반 탄소중립 교육 프로그램</h3>
+          <div class="meta">초 · 중등</div>
+          <p>전과정평가(LCA) 방법론을 토대로 탄소 배출량 산정 기준을 설명하는 프로그램입니다.</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="no">02</div>
+        <div>
+          <h3>BR광릉숲 생태 현장교육</h3>
+          <div class="meta">초 · 중등</div>
+          <p>유네스코 생물권보전지역인 광릉숲 현장에서 진행하는 생태 탐구 수업입니다.</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="no">03</div>
+        <div>
+          <h3>기후위기 대응 참여형 수업</h3>
+          <div class="meta">초등 4학년 이상</div>
+          <p>죄책감이 아닌 효능감을 키우는 게임과 스토리텔링 중심의 초등 눈높이 환경교육입니다.</p>
+        </div>
       </div>
     </div>
-    <div class="course">
-      <div class="no">02</div>
-      <div>
-        <h3>LCA 기반 탄소중립 교육 프로그램</h3>
-        <div class="meta">초 · 중등 · BR광릉숲 연계</div>
-        <p>전과정평가(LCA) 방법론을 토대로 탄소 배출량 산정 기준을 설명하며, BR광릉숲(유네스코 생물권보전지역) 현장과 연계해 진행합니다.</p>
+
+    <div class="audience-group">
+      <div class="audience-head">
+        <svg class="audience-icon" viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="#5C7A5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="6" y1="27" x2="26" y2="27"/>
+          <ellipse cx="16" cy="14" rx="9" ry="8"/>
+          <line x1="16" y1="22" x2="16" y2="27"/>
+        </svg>
+        <h3 class="audience-title">성인</h3>
+      </div>
+      <div class="applied-label">적용 강의</div>
+
+      <div class="course">
+        <div class="no">01</div>
+        <div>
+          <h3>패스트패션 산업의 환경 영향과 그린워싱 사례 분석</h3>
+          <div class="meta">성인 · 일반 시민</div>
+          <p>의류 생산·소비 전 과정의 탄소 배출 구조를 살펴보고, 실제 사례를 통해 그린워싱 표시 기준과 판별 방법을 다룹니다.</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="no">02</div>
+        <div>
+          <h3>지속가능발전목표(SDGs)와 생활 속 실천 과제</h3>
+          <div class="meta">성인 40대 이상</div>
+          <p>UN 지속가능발전목표 17개 항목을 중심으로, 일상적 소비와 생활 방식이 목표 달성과 맺는 연관성을 다룹니다.</p>
+        </div>
+      </div>
+      <div class="course">
+        <div class="no">03</div>
+        <div>
+          <h3>탄소중립과 에너지 전환</h3>
+          <div class="meta">성인 · 일반 시민</div>
+          <p>에너지 구조 전환의 원리와 정책적 쟁점을 짚는 심화 강의입니다.</p>
+        </div>
       </div>
     </div>
-    <div class="course">
-      <div class="no">03</div>
-      <div>
-        <h3>지속가능발전목표(SDGs)와 생활 속 실천 과제</h3>
-        <div class="meta">성인 40대 이상</div>
-        <p>UN 지속가능발전목표 17개 항목을 중심으로, 일상적 소비와 생활 방식이 목표 달성과 맺는 연관성을 다룹니다.</p>
+
+    <div class="audience-group">
+      <div class="audience-head">
+        <svg class="audience-icon" viewBox="0 0 32 32" width="26" height="26" fill="none" stroke="#5C7A5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="16" cy="16" r="11"/>
+          <circle cx="16" cy="16" r="7.5"/>
+          <circle cx="16" cy="16" r="4"/>
+          <circle cx="16" cy="16" r="0.8" fill="#5C7A5A" stroke="none"/>
+        </svg>
+        <h3 class="audience-title">시니어</h3>
+      </div>
+      <div class="applied-label">적용 강의</div>
+
+      <div class="course">
+        <div class="no">01</div>
+        <div>
+          <h3>눈높이로 다시 짜는 SDGs·기후위기 강의</h3>
+          <div class="meta">시니어</div>
+          <p>시니어 대상 속도와 언어를 조정한 참여형 환경교육 프로그램입니다.</p>
+        </div>
       </div>
     </div>
   </section>
