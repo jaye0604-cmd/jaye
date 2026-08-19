@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>환경교육사회적협동조합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F6F8F1;
+    --bg-alt: #EBF0E2;
+    --ink: #16302B;
+    --text: #2B342C;
+    --teal: #1F4B43;
+    --teal-deep: #10241F;
+    --gold: #A9762F;
+    --white: #FFFFFF;
+    --line: rgba(22,48,43,0.12);
+    --font-display: 'Gowun Batang', serif;
+    --font-body: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color: inherit; }
+  .wrap{ max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---- header ---- */
+  header.site{
+    display:flex; align-items:center; justify-content: space-between;
+    padding: 22px 28px;
+    max-width: 1080px; margin: 0 auto;
+  }
+  .wordmark{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-0.01em; }
+  .wordmark .leaf-mini{ width:22px; height:22px; flex:none; }
+  .wordmark span{ font-size: 15px; }
+  header.site nav a{
+    text-decoration:none; font-size: 14px; font-weight:600; color: var(--teal);
+    border: 1px solid var(--teal); border-radius: 999px; padding: 8px 18px;
+  }
+
+  /* ---- hero ---- */
+  .hero{ position: relative; overflow: hidden; padding: 20px 0 64px; }
+  .hero .wrap{ display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items:center; }
+  .eyebrow{
+    display:inline-block; font-size: 13px; font-weight:700; letter-spacing: 0.14em;
+    color: var(--teal); text-transform: uppercase; margin-bottom: 18px;
+  }
+  h1{
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .hero p.sub{
+    margin-top: 20px; font-size: 16px; color: var(--text); max-width: 46ch;
+  }
+  .badges{ display:flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .badge{
+    font-size: 13px; font-weight: 600; color: var(--teal-deep);
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 8px; padding: 8px 14px;
+  }
+  .cta-row{ display:flex; flex-wrap:wrap; gap: 12px; margin-top: 30px; }
+  .btn{
+    display:inline-block; font-weight:700; font-size: 15px; text-decoration:none;
+    padding: 13px 24px; border-radius: 10px; border: 1px solid transparent;
+  }
+  .btn.primary{ background: var(--teal); color: var(--white); }
+  .btn.primary:hover{ background: var(--teal-deep); }
+  .btn.ghost{ border-color: var(--teal); color: var(--teal); }
+  .btn.ghost:hover{ background: var(--bg-alt); }
+
+  .hero-art{ position: relative; aspect-ratio: 1/1; }
+  .hero-art svg{ width: 100%; height: 100%; }
+
+  /* ---- programs ---- */
+  .section{ padding: 56px 0; }
+  .section-head{ margin-bottom: 32px; }
+  .section-head .eyebrow{ margin-bottom: 8px; }
+  h2{
+    font-family: var(--font-display); font-size: clamp(22px,3vw,28px);
+    color: var(--ink); font-weight: 700;
+  }
+  .cards{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card{
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: 4px 20px 4px 4px;
+    padding: 26px 22px; position: relative;
+  }
+  .card .tag{
+    display:inline-block; font-size:12px; font-weight:700; color: var(--gold);
+    background: rgba(169,118,47,0.1); border-radius: 6px; padding: 4px 10px; margin-bottom: 14px;
+  }
+  .card h3{ font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; line-height:1.4; }
+  .card p{ font-size: 14px; color: var(--text); }
+
+  /* ---- stats ---- */
+  .stats{
+    background: var(--teal-deep); color: var(--white);
+    border-radius: 24px; padding: 40px 32px;
+    display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; text-align:center;
+  }
+  .stats .num{ font-family: var(--font-display); font-size: clamp(30px,5vw,44px); font-weight:700; }
+  .stats .label{ font-size: 13px; opacity: 0.75; margin-top: 6px; }
+
+  /* ---- why ---- */
+  .why-list{ display:flex; flex-direction: column; }
+  .why-item{
+    display:grid; grid-template-columns: 40px 1fr; gap: 18px;
+    padding: 22px 0; border-top: 1px solid var(--line);
+  }
+  .why-item:last-child{ border-bottom: 1px solid var(--line); }
+  .why-item .leaf-mini{ width: 22px; height: 22px; margin-top: 3px; }
+  .why-item h3{ font-size: 16px; font-weight:700; color: var(--ink); margin-bottom: 6px; }
+  .why-item p{ font-size: 14px; color: var(--text); max-width: 60ch; }
+
+  /* ---- closing cta ---- */
+  .closing{
+    background: var(--bg-alt); border-radius: 24px; padding: 48px 32px;
+    text-align:center;
+  }
+  .closing h2{ margin-bottom: 12px; }
+  .closing p{ font-size: 15px; margin-bottom: 26px; color: var(--text); }
+  .closing .cta-row{ justify-content: center; }
+
+  footer{
+    padding: 36px 0 48px; font-size: 13px; color: rgba(43,52,44,0.65);
+    display:flex; justify-content: space-between; flex-wrap:wrap; gap: 10px;
+  }
+
+  @media (max-width: 760px){
+    header.site nav a{ display:none; }
+    .hero .wrap{ grid-template-columns: 1fr; }
+    .hero-art{ max-width: 220px; margin: 8px auto 0; order:-1; }
+    .cards{ grid-template-columns: 1fr; }
+    .stats{ grid-template-columns: 1fr; }
+    .why-item{ grid-template-columns: 28px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wordmark">
+    <svg class="leaf-mini" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 4 4 9 4 14c0 4.4 3.6 8 8 8s8-3.6 8-8c0-5-3-10-8-12z" fill="#1F4B43"/></svg>
+    <span>환경교육사회적협동조합</span>
+  </div>
+  <nav><a href="#contact">강의 문의</a></nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">사회적협동조합</span>
+      <h1>이론이 아니라 삶에 닿는 환경교육으로,<br>지속가능한 변화를 만듭니다.</h1>
+      <p class="sub">환경교육사회적협동조합은 학교와 지역사회를 직접 마주하며, 그린워싱 없는 진짜 환경 이야기를 전합니다.</p>
+      <div class="badges">
+        <span class="badge">설립 2021년</span>
+        <span class="badge">누적 강의 180회</span>
+        <span class="badge">참여 기관 65곳</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">강의 문의하기</a>
+        <a class="btn ghost" href="#programs">프로그램 보기</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(150,150)">
+          <ellipse rx="120" ry="120" fill="#EBF0E2"/>
+          <g>
+            <path d="M0 -95 C 40 -70, 55 -30, 40 0 C 25 -20, 5 -55, 0 -95Z" fill="#1F4B43"/>
+            <path d="M0 -95 C -40 -70, -55 -30, -40 0 C -25 -20, -5 -55, 0 -95Z" fill="#2C6358"/>
+            <path d="M67 -67 C 55 -25, 25 -5, 0 0 C 10 -25, 35 -55, 67 -67Z" fill="#1F4B43"/>
+            <path d="M-67 -67 C -55 -25, -25 -5, 0 0 C -10 -25, -35 -55, -67 -67Z" fill="#2C6358"/>
+            <path d="M95 0 C 55 5, 25 25, 0 0 C 25 -5, 60 -10, 95 0Z" fill="#3B7A6C"/>
+            <path d="M-95 0 C -55 5, -25 25, 0 0 C -25 -5, -60 -10, -95 0Z" fill="#3B7A6C"/>
+            <path d="M67 67 C 35 55, 10 25, 0 0 C 25 5, 55 25, 67 67Z" fill="#4E9284"/>
+            <path d="M-67 67 C -35 55, -10 25, 0 0 C -25 5, -55 25, -67 67Z" fill="#4E9284"/>
+            <path d="M0 95 C -10 55, 5 25, 0 0 C 5 25, 15 60, 0 95Z" fill="#66A897"/>
+            <circle r="14" fill="#A9762F"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="programs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">주요 프로그램</span>
+      <h2>지금 진행하는 강의</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">성인 · 일반 시민</span>
+        <h3>패스트패션과 그린워싱 바로 보기</h3>
+        <p>옷장 속 소비가 만드는 탄소발자국을 짚고, 광고 뒤에 숨은 그린워싱을 가려내는 법을 다룹니다.</p>
+      </div>
+      <div class="card">
+        <span class="tag">초 · 중등 · BR광릉숲</span>
+        <h3>탄소중립, 숫자로 이해하기</h3>
+        <p>소나무 한 그루의 흡수량부터 자동차 배출량까지, LCA로 탄소를 눈에 보이게 설명합니다. BR광릉숲(유네스코 생물권보전지역)과 연계해 현장감 있게 진행합니다.</p>
+      </div>
+      <div class="card">
+        <span class="tag">성인 40대 이상</span>
+        <h3>SDGs, 우리 삶과 연결하기</h3>
+        <p>멀게만 느껴지던 지속가능발전목표를, 일상의 불편한 진실로 풀어냅니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="stats">
+      <div>
+        <div class="num">180+</div>
+        <div class="label">누적 강의 횟수</div>
+      </div>
+      <div>
+        <div class="num">65</div>
+        <div class="label">참여 기관 수</div>
+      </div>
+      <div>
+        <div class="num">3,200+</div>
+        <div class="label">만난 참여자 수</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">차별점</span>
+      <h2>우리가 다른 이유</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item">
+        <svg class="leaf-mini" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 4 4 9 4 14c0 4.4 3.6 8 8 8s8-3.6 8-8c0-5-3-10-8-12z" fill="#1F4B43"/></svg>
+        <div>
+          <h3>대상에 맞춘 눈높이 설계</h3>
+          <p>성인 초보자용과 초등학생용을 따로 설계해, 눈높이에 맞는 언어와 난이도로 전달합니다.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <svg class="leaf-mini" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 4 4 9 4 14c0 4.4 3.6 8 8 8s8-3.6 8-8c0-5-3-10-8-12z" fill="#1F4B43"/></svg>
+        <div>
+          <h3>구조를 짚는 시선</h3>
+          <p>개인 소비자의 탓으로 돌리지 않고, 산업과 제도의 책임까지 함께 짚습니다.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <svg class="leaf-mini" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 4 4 9 4 14c0 4.4 3.6 8 8 8s8-3.6 8-8c0-5-3-10-8-12z" fill="#1F4B43"/></svg>
+        <div>
+          <h3>시사와 맞닿은 콘텐츠</h3>
+          <p>그린워싱 논란, 정책 변화 같은 최신 환경 이슈를 빠르게 강의 자료로 반영합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="closing">
+      <h2>학교와 기관을 위한 강의를 준비하고 있습니다</h2>
+      <p>강의 일정, 대상, 주제를 알려주시면 맞춤 커리큘럼을 안내해 드립니다.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:[이메일 주소를 입력하세요]">강의 문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© 2026 환경교육사회적협동조합</span>
+  <span>문의 [이메일 주소를 입력하세요] · [전화번호를 입력하세요]</span>
+</footer>
+
+</body>
+</html>

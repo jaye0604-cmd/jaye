@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디자인 시안 v3 — 환경교육사회적협동조합</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family:'Noto Sans KR','Malgun Gothic',sans-serif;
+    background:#FBFAF5; color:#1E2A22;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width: 760px; margin:0 auto; padding: 0 28px; }
+  .label-bar{
+    background:#1A1A1A; color:#B9B9B9; padding: 12px 28px;
+    font-size:12px; letter-spacing:0.02em;
+  }
+
+  header{ padding: 32px 0 0; }
+  .top-row{ display:flex; justify-content:space-between; align-items:baseline; padding-bottom:18px; border-bottom:1px solid rgba(30,42,34,0.14); }
+  .wordmark{ font-size:14px; font-weight:700; letter-spacing:0.01em; }
+  .top-row a{ font-size:13px; color:#1E2A22; text-decoration:none; border-bottom:1px solid #1E2A22; padding-bottom:2px; }
+
+  .hero{ padding: 56px 0 60px; }
+  .kicker{ font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#5C7A5A; margin-bottom:22px; font-weight:700; }
+  h1{
+    font-family:'Gowun Batang', serif; font-weight:700;
+    font-size: clamp(26px, 4vw, 38px); line-height:1.55;
+    max-width: 15ch;
+  }
+  .lede{
+    margin-top: 28px; font-size: 16.5px; line-height:1.85; color:#3A473C; max-width: 52ch;
+  }
+  .lede b{ font-family:'Gowun Batang',serif; font-weight:700; color:#1E2A22; font-size:1.15em; }
+  .hero-cta{ margin-top: 30px; display:inline-block; font-size:14px; font-weight:700; color:#1E2A22; text-decoration:none; border-bottom: 1.5px solid #5C7A5A; padding-bottom: 3px; }
+
+  section{ padding: 44px 0; border-top: 1px solid rgba(30,42,34,0.14); }
+  .section-kicker{ font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#5C7A5A; font-weight:700; margin-bottom: 28px; }
+
+  .course{ display:grid; grid-template-columns: 40px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid rgba(30,42,34,0.1); }
+  .course:first-of-type{ border-top:none; }
+  .course .no{ font-family:'Gowun Batang',serif; font-size:20px; color:#5C7A5A; }
+  .course h3{ font-size:16px; font-weight:700; margin-bottom:6px; }
+  .course .meta{ font-size:12px; color:#5C7A5A; font-weight:600; margin-bottom:8px; }
+  .course p{ font-size:14px; color:#4A564C; max-width: 54ch; }
+
+  .why{ display:flex; flex-direction:column; gap: 20px; }
+  .why-row{ display:flex; gap: 14px; font-size:14.5px; line-height:1.7; color:#3A473C; }
+  .why-row b{ color:#1E2A22; }
+
+  .closing{ padding: 56px 0 64px; text-align:left; }
+  .closing h2{ font-family:'Gowun Batang',serif; font-weight:700; font-size:22px; margin-bottom:14px; max-width:20ch; }
+  .closing p{ font-size:14.5px; color:#4A564C; margin-bottom:22px; max-width:48ch; }
+  .btn{
+    display:inline-block; background:#1E2A22; color:#FBFAF5; font-weight:700; font-size:14px;
+    text-decoration:none; padding:13px 24px; border-radius:3px;
+  }
+
+  footer{ padding: 24px 0 40px; font-size:12.5px; color:rgba(30,42,34,0.55); border-top:1px solid rgba(30,42,34,0.14); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+
+  .forest-line{ width:100%; height:auto; display:block; margin: 30px 0 -6px; }
+
+  @media (max-width:600px){
+    .course{ grid-template-columns: 28px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="label-bar">시안 — 에디토리얼 (강의 목차형 레이아웃, 세이지 원포인트)</div>
+
+<div class="wrap">
+  <header>
+    <div class="top-row">
+      <div class="wordmark">환경교육사회적협동조합</div>
+      <a href="#contact">강의 문의</a>
+    </div>
+  </header>
+
+  <svg class="forest-line" viewBox="0 0 760 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <path id="fir" d="M-35,0 L-15,-30 L-22,-30 L-6,-55 L-13,-55 L0,-78 L13,-55 L6,-55 L22,-30 L15,-30 L35,0 Z"/>
+      <g id="round">
+        <ellipse cx="0" cy="-34" rx="24" ry="21"/>
+        <line x1="0" y1="-13" x2="0" y2="0"/>
+      </g>
+    </defs>
+    <g fill="none" stroke="#5C7A5A" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity="0.5">
+      <line x1="0" y1="82" x2="760" y2="82" stroke-width="1"/>
+      <use href="#round" transform="translate(50,82) scale(0.8)"/>
+      <use href="#fir" transform="translate(140,82) scale(0.75)"/>
+      <use href="#fir" transform="translate(230,82) scale(0.95)"/>
+      <use href="#round" transform="translate(330,82) scale(1)"/>
+      <use href="#fir" transform="translate(430,82) scale(0.7)"/>
+      <use href="#round" transform="translate(520,82) scale(0.85)"/>
+      <use href="#fir" transform="translate(610,82) scale(1)"/>
+      <use href="#round" transform="translate(700,82) scale(0.75)"/>
+    </g>
+  </svg>
+
+  <div class="hero">
+    <div class="kicker">사회적협동조합</div>
+    <h1>이론이 아니라 삶에 닿는 환경교육</h1>
+    <p class="lede">
+      2021년 설립 이후, <b>180회</b>의 강의로 <b>65개</b> 기관, <b>3,200명</b>이 넘는 사람들을 만났습니다.
+      학교와 지역사회를 직접 마주하며, 그린워싱 없는 진짜 환경 이야기를 전합니다.
+    </p>
+    <a class="hero-cta" href="#courses">지금 진행하는 강의 보기 ↓</a>
+  </div>
+
+  <section id="courses">
+    <div class="section-kicker">지금 진행하는 강의</div>
+
+    <div class="course">
+      <div class="no">01</div>
+      <div>
+        <h3>패스트패션 산업의 환경 영향과 그린워싱 사례 분석</h3>
+        <div class="meta">성인 · 일반 시민</div>
+        <p>의류 생산·소비 전 과정의 탄소 배출 구조를 살펴보고, 실제 사례를 통해 그린워싱 표시 기준과 판별 방법을 다룹니다.</p>
+      </div>
+    </div>
+    <div class="course">
+      <div class="no">02</div>
+      <div>
+        <h3>LCA 기반 탄소중립 교육 프로그램</h3>
+        <div class="meta">초 · 중등 · BR광릉숲 연계</div>
+        <p>전과정평가(LCA) 방법론을 토대로 탄소 배출량 산정 기준을 설명하며, BR광릉숲(유네스코 생물권보전지역) 현장과 연계해 진행합니다.</p>
+      </div>
+    </div>
+    <div class="course">
+      <div class="no">03</div>
+      <div>
+        <h3>지속가능발전목표(SDGs)와 생활 속 실천 과제</h3>
+        <div class="meta">성인 40대 이상</div>
+        <p>UN 지속가능발전목표 17개 항목을 중심으로, 일상적 소비와 생활 방식이 목표 달성과 맺는 연관성을 다룹니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-kicker">우리가 다른 이유</div>
+    <div class="why">
+      <div class="why-row"><span>—</span><span><b>대상에 맞춘 눈높이 설계.</b> 성인 초보자용과 초등학생용을 따로 설계해, 눈높이에 맞는 언어와 난이도로 전달합니다.</span></div>
+      <div class="why-row"><span>—</span><span><b>구조를 짚는 시선.</b> 개인 소비자의 탓으로 돌리지 않고, 산업과 제도의 책임까지 함께 짚습니다.</span></div>
+      <div class="why-row"><span>—</span><span><b>시사와 맞닿은 콘텐츠.</b> 그린워싱 논란, 정책 변화 같은 최신 환경 이슈를 빠르게 강의 자료로 반영합니다.</span></div>
+    </div>
+  </section>
+
+  <section class="closing" id="contact">
+    <h2>학교와 기관을 위한 강의를 준비하고 있습니다</h2>
+    <p>강의 일정, 대상, 주제를 알려주시면 맞춤 커리큘럼을 안내해 드립니다.</p>
+    <a class="btn" href="mailto:[이메일 주소를 입력하세요]">강의 문의하기</a>
+  </section>
+
+  <footer>
+    <span>© 2026 환경교육사회적협동조합</span>
+    <span>[이메일 주소] · [전화번호]</span>
+  </footer>
+</div>
+
+</body>
+</html>
